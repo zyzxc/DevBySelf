@@ -10,6 +10,13 @@
     <packaging>war</packaging>
     <name>com.self.ui Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <properties>
+        <spring.version>4.2.5.RELEASE</spring.version>
+        <beetl.version>2.2.14</beetl.version>
+        <javaee.version>7.0</javaee.version>
+        <fastjson.version>1.2.7</fastjson.version>
+        <log4j.version>1.2.17</log4j.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -17,6 +24,38 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibeetl</groupId>
+            <artifactId>beetl</artifactId>
+            <version>${beetl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${javaee.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>com.self.ui</finalName>
