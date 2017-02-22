@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--resultType 指定单条记录返回的类型-->
+<mapper namespace="dao.IUserDao">
+    <select id="getUserById" parameterType="int" resultType="model.User">
+        select * from user where id = #{id}
+    </select>
+    <!--'%${value}' 表示拼接sql串,只能使用value,有可能会引起sql注入的情况-->
+    <select id="getUserByName" parameterType="String" resultType="model.User">
+        SELECT * FROM user WHERE username LIKE #{name}
+    </select>
+    <!--INSERT INTO USER (id,username,sex,address) VALUE (null,"陈潇然","女","大学同学")-->
+    <insert id="add" parameterType="model.User">
+        insert into user (userName,passWord,sex,age,birthDay,address,email,phoneNum) values (#{userName},#{passWord},#{sex},#{age},#{birthDay},#{address},#{email},#{phoneNum})
+    </insert>
+</mapper>

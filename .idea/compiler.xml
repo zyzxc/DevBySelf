@@ -23,14 +23,16 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="1.module" />
-        <module name="2.client" />
-        <module name="3.ui" />
+        <module name="com.devself" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="1.module" target="1.8" />
       <module name="2.client" target="1.8" />
       <module name="3.ui" target="1.8" />
+      <module name="com.devself" target="1.8" />
+      <module name="com.self" target="1.8" />
+      <module name="com.self.module" target="1.8" />
       <module name="DevBySelf" target="1.8" />
     </bytecodeTargetLevel>
   </component>
